@@ -409,13 +409,17 @@ Configuration GamingMinimal {
             ValueData   = "0"
             ValueType = "Dword"
         }
-        Registry DisableGamingMode {
-            Ensure = "Present"
-            Key = "HKEY_USERS\${mysid}\Software\Microsoft\GameBar"
-            ValueName   = "AutoGameModeEnabled"
-            ValueData   = "0"
-            ValueType = "Dword"
-        }
+        #Registry DisableGamingMode {
+        #    Ensure = "Present"
+        #    Key = "HKEY_USERS\${mysid}\Software\Microsoft\GameBar"
+        #    ValueName   = "AutoGameModeEnabled"
+        #    ValueData   = "0"
+        #    ValueType = "Dword"
+        #}
+        ## Game mode offers desirable functions, such as suspending misc tasks (winupdate, etc),
+        ## clamping cpu to max freq in compatible power profiles,
+        ## misc other blackmagic documented somewhere on ms dev blogs and a few msft employee reddit posts.
+        ## No good comes from disabling this.
         Registry DisableSigninOptionReopenApps {
             Ensure = "Present"
             Key = "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\UserARSO\${mysid}"
