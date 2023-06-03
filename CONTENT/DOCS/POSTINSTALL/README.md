@@ -9,6 +9,7 @@
    - Open **Windows Security** and go to **Virus and Threat Protection > Virus and Threat Protection Settings > Exclusions** and be sure to add each of your games as as **full paths to the executable** vs just using executable name to ensure ideal security with least impact during gameplay. e.g. *D:\Steam Games\steamapps\common\Half-Life\hl.exe vs just hl.exe*
    - Open Powershell as admin and enter the following command to add scanning exclusions for the Steam, NVIDIA Shader Cache folder and Microsoft's recommendations for exclusions to Windows Defender. See [Technical References](../../TECHNICAL%20REFERENCES/README.md) for more information on Microsoft's recommendations.
    - This will help reduce the time spent scanning by Windows Defender as new files are downloaded and those used during gameplay (e.g. textures, sounds).
+   - ❓ I have concerns over excluding the steam folder. Notably, the steamapps folder is user writable, against Windows convention. Further, it has become common for games originating from certain Eastern countries to require UAC elevation, and steam's catalog is generally a lawless place. It would be unwise to exclude this folder from AV checks, particularly since there are no safeguards against, say, replacing with malware a game which the user is trained to automatically permit UAC elevation. -Aelius
 
       ```
       Add-MpPreference -ExclusionPath ${env:ProgramFiles(x86)}"\Steam\"
