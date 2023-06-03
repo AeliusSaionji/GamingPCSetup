@@ -5,10 +5,10 @@
    - When higher C-States values are made available such as  C6, C7, C8 the more latency is introduced due to the time it takes to restore and transition the active power state.
    - Some configurations may be negatively impacted by disabling all avaiable C-States, if this is the case then try limiting the value to **C2 or C3**. This is likely due to a bottleneck in memory or cpu.
 3. **Disable Intel (R) Speed Shift Technology**
-   - This is counter indicated by one of the author's own sources. -Aelius
-   - This may be unnecessary thanks to Game Mode. -Aelius
+   - ❓ This is counter indicated by one of the author's own sources. -Aelius
+   - ❓ This may be unnecessary thanks to Game Mode. -Aelius
 4. **Disable CPU Enhanced Intel Speedstep Technology (EIST) Function**
-   - See #3
+   - ❓ See #3
 5. **Turbo Boost**
    - If isolating performance behavior issues, disable.
    - If you'd like to use Turbo Boost frequencies I'd recommend using a static overclock to reduce minor overhead from dynamic frequency scaling, otherwise **enable**.
@@ -23,6 +23,7 @@
 12. Leave High Precision Event Timer (HPET) ON in the BIOS if present or if it is enabled by default
 13. Make sure **Platform Power Management is disabled**
 14. **Disable any onboard LED/RGB traces/lights**, e.g. Gigabyte Ambient LED
+    - ❓ Why? -Aelius
 15. Set your **PCI Express Max Link Speed to Gen3**, devices can negotiate lower spec as needed.
 16. Set a static voltage for CPU vcore then use load line calibration (LLC) to help maintain constant voltage under load.
     - Reference CPU manufacturers documention as a guideline for vcore specifications.
