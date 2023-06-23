@@ -17,6 +17,7 @@ Download the latest drivers, install and configure your settings for ideal and c
 3. Complete the rest of the steps and wait for the process to complete
 4. After the installation is complete right click on your desktop and choose NVIDIA Control Panel
 5. Go to **Adjust image settings with preview**, then select **Use my preference emphasizing: Performance**
+   - ❓ This is questionable- very few settings are actually changed when you do this, other than vsync being globally forced off, which is undesireable. This WILL interefere with video playback and it WILL interefere with freesync/gsync. A note should be added to re-enable vsync "let application decide", or more realistically, just do not suggest this and instead go over the actually relevant settings to change, and why.
 6. Go to Resolution set the refresh rate to 120hz or higher for your desktop experience if your monitor is capable.
    - A lower value may be fine for desktop use and most games will allow you to override this setting via game launch option. e.g. -freq 144
 7. Go to **Adjust desktop size and position** and choose **Perform Scaling on GPU**, and choose **No Scaling**
@@ -24,7 +25,7 @@ Download the latest drivers, install and configure your settings for ideal and c
    - **Power management mode**: Leave this at **Optimal Power globally** and set this to **Prefer Maximum Performance** for your game.
 9. Avoid adjusting any of the color settings initially such as Digital Vibrance, Brightness, or Contrast. Ensure your gaming experience is running smoothly first for a few days or up to a week, then slowly start to add new features to your build.
    - Games may also provide options ingame for improving visual effects, colors or quality, try these first.
-10. Leave all other settings at the NVIDIA defaults. [See Gaming Configurations](../GAMECONFIGS/README.md)
+11. Leave all other settings at the NVIDIA defaults. [See Gaming Configurations](../GAMECONFIGS/README.md)
 
 Many guides will recommend changing **Maximum pre-rendered frames** but not every PC or game will behave the same with it at a low value even on high end PCs. Many gaming professionals use the default setting and still perform at the highest levels. When in doubt benchmark the impacts with MSI Afterburner and GPUView.
 
